@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sniperfactory</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            img {
+                vertical-align: middle;
+            }
+            .container {
+                position: sticky;
+                width: 100%;
+                height: 70px;
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                background-color: #fff;
+                border-bottom: 1px solid rgb(223, 223, 223);
+                padding: 0 160px;
+            }
+            .item {
+                text-align: center;
+                line-height: 70px;
+            }
+            .container > div:nth-child(3) {
+                position: relative;
+            }
+            .container > div:nth-child(3)::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #f43f5e;
+            }
+            .container > div:last-child {
+                color: #1e3a8a;
+                font-weight: 700;
+                position: relative;
+            }
+            .container > div:last-child::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 35px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #3b82f6;
+            }
+            .logo {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item"><img src="./images/logo.svg" alt="스나이퍼 팩토리 로고" class="logo" /></div>
+            <div class="item">스팩소개</div>
+            <div class="item">교육과정</div>
+            <div class="item">공지사항</div>
+            <div class="item">수료생 커뮤니티</div>
+            <div class="item">협력사</div>
+            <div class="item">스팩블로그</div>
+        </div>
+    </body>
+</html>

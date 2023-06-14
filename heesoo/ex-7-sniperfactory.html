@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sniperfactory</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                font-size: 14px;
+            }
+            main {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 32px 0;
+            }
+            button {
+                outline: none;
+                border: 0;
+                color: #fff;
+                cursor: pointer;
+            }
+            .center {
+                width: 1024px;
+                height: auto;
+            }
+            h2 {
+                margin-bottom: 20px;
+            }
+            .grid__container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 20px;
+            }
+            .item {
+                width: 320px;
+                height: 384px;
+                border: 1px solid #e5e7eb;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .item__thumbnail {
+                height: 150px;
+                width: 100%;
+                overflow: hidden;
+            }
+            .item__thumbnail > img {
+                width: auto;
+                height: 100%;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+            }
+            .item__thumbnail:hover img {
+                transform: scale(1.1);
+            }
+            .item__inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 16px;
+                width: 100%;
+                height: 234px;
+            }
+            .inner__desc {
+                width: 100%;
+            }
+            .inner__desc > p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: #9da3ae;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-bottom: 10px;
+            }
+            .label--green {
+                display: inline-block;
+                padding: 2px 8px;
+                background-color: #e2fbe8;
+                color: #4ca154;
+                border-radius: 10px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .label--gray {
+                display: inline-block;
+                padding: 2px 8px;
+                background-color: #f3f4f6;
+                color: #6c727f;
+                border-radius: 10px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .more__desc {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 0;
+            }
+            .more__desc > span {
+                font-size: 12px;
+            }
+            .btn--blue--l {
+                width: 100%;
+                height: 36px;
+                background-color: #4e80ee;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="center">
+                <h2>교육과정</h2>
+                <div class="grid__container">
+                    <div class="item">
+                        <div class="item__thumbnail">
+                            <img src="./images/banner-1.png" alt="플러터 배너" />
+                        </div>
+                        <div class="item__inner">
+                            <div>
+                                <span class="label--green">신청가능</span>
+                            </div>
+                            <div class="inner__desc">
+                                <h3>Flutter 모바일 어플리케이션 개발 부트캠프과정</h3>
+                                <p>
+                                    4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의
+                                    어플리케이션으로 포트폴리오를 쌓아보세요. 최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!
+                                </p>
+                            </div>
+                            <div class="more__desc">
+                                <span class="label--gray">취업연계과정</span>
+                                <span>기수 : 3기</span>
+                            </div>
+                            <button class="btn--blue--l">더 알아보기</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__thumbnail">
+                            <img src="./images/banner-1.png" alt="플러터 배너" />
+                        </div>
+                        <div class="item__inner">
+                            <div>
+                                <span class="label--green">신청가능</span>
+                            </div>
+                            <div class="inner__desc">
+                                <h3>Flutter 모바일 어플리케이션 개발 부트캠프과정</h3>
+                                <p>
+                                    4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의
+                                    어플리케이션으로 포트폴리오를 쌓아보세요. 최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!
+                                </p>
+                            </div>
+                            <div class="more__desc">
+                                <span class="label--gray">취업연계과정</span>
+                                <span>기수 : 3기</span>
+                            </div>
+                            <button class="btn--blue--l">더 알아보기</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__thumbnail">
+                            <img src="./images/banner-1.png" alt="플러터 배너" />
+                        </div>
+                        <div class="item__inner">
+                            <div>
+                                <span class="label--green">신청가능</span>
+                            </div>
+                            <div class="inner__desc">
+                                <h3>Flutter 모바일 어플리케이션 개발 부트캠프과정</h3>
+                                <p>
+                                    4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의
+                                    어플리케이션으로 포트폴리오를 쌓아보세요. 최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!
+                                </p>
+                            </div>
+                            <div class="more__desc">
+                                <span class="label--gray">취업연계과정</span>
+                                <span>기수 : 3기</span>
+                            </div>
+                            <button class="btn--blue--l">더 알아보기</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__thumbnail">
+                            <img src="./images/banner-1.png" alt="플러터 배너" />
+                        </div>
+                        <div class="item__inner">
+                            <div>
+                                <span class="label--green">신청가능</span>
+                            </div>
+                            <div class="inner__desc">
+                                <h3>Flutter 모바일 어플리케이션 개발 부트캠프과정</h3>
+                                <p>
+                                    4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의
+                                    어플리케이션으로 포트폴리오를 쌓아보세요. 최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!
+                                </p>
+                            </div>
+                            <div class="more__desc">
+                                <span class="label--gray">취업연계과정</span>
+                                <span>기수 : 3기</span>
+                            </div>
+                            <button class="btn--blue--l">더 알아보기</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__thumbnail">
+                            <img src="./images/banner-1.png" alt="플러터 배너" />
+                        </div>
+                        <div class="item__inner">
+                            <div>
+                                <span class="label--green">신청가능</span>
+                            </div>
+                            <div class="inner__desc">
+                                <h3>Flutter 모바일 어플리케이션 개발 부트캠프과정</h3>
+                                <p>
+                                    4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의
+                                    어플리케이션으로 포트폴리오를 쌓아보세요. 최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!
+                                </p>
+                            </div>
+                            <div class="more__desc">
+                                <span class="label--gray">취업연계과정</span>
+                                <span>기수 : 3기</span>
+                            </div>
+                            <button class="btn--blue--l">더 알아보기</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__thumbnail">
+                            <img src="./images/banner-1.png" alt="플러터 배너" />
+                        </div>
+                        <div class="item__inner">
+                            <div>
+                                <span class="label--green">신청가능</span>
+                            </div>
+                            <div class="inner__desc">
+                                <h3>Flutter 모바일 어플리케이션 개발 부트캠프과정</h3>
+                                <p>
+                                    4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의
+                                    어플리케이션으로 포트폴리오를 쌓아보세요. 최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!
+                                </p>
+                            </div>
+                            <div class="more__desc">
+                                <span class="label--gray">취업연계과정</span>
+                                <span>기수 : 3기</span>
+                            </div>
+                            <button class="btn--blue--l">더 알아보기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
