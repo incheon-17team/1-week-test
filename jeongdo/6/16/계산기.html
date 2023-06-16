@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        margin: 0 auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 500px;
+        background-color: bisque;
+      }
+      .display {
+        width: 100%;
+        height: 150px;
+        background-color: burlywood;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .key-container {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .key {
+        padding: 10px;
+        background-color: azure;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="display"></div>
+      <div class="key-container">
+        <div class="key" onClick="{onClickKey(this)}">1</div>
+        <div class="key" onClick="{onClickKey(this)}">2</div>
+        <div class="key" onClick="{onClickKey(this)}">3</div>
+      </div>
+      <div class="key-container">
+        <div class="key" onClick="{onClickKey(this)}">4</div>
+        <div class="key" onClick="{onClickKey(this)}">5</div>
+        <div class="key" onClick="{onClickKey(this)}">6</div>
+      </div>
+      <div class="key-container">
+        <div class="key" onClick="{onClickKey(this)}">7</div>
+        <div class="key" onClick="{onClickKey(this)}">8</div>
+        <div class="key" onClick="{onClickKey(this)}">9</div>
+      </div>
+      <div class="key-container">
+        <div class="key" onClick="{cancel(this)}">C</div>
+        <div class="key" onClick="{onClickKey(this)}">0</div>
+        <div class="key" onClick="allClear(this)">All Clear</div>
+      </div>
+      <div class="key-container">
+        <div class="key" onClick="{onClickKey(this)}">+</div>
+        <div class="key" onClick="{onClickKey(this)}">-</div>
+        <div class="key" onClick="{onClickKey(this)}">*</div>
+        <div class="key" onClick="{onClickKey(this)}">/</div>
+        <div class="key" onClick="{answer(this)}">=</div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const key_element = document.querySelectorAll(".key");
+    const display_value = document.querySelector(".display");
+    let display_var = "";
+    const onClickKey = (event) => {
+      console.log(event.innerHTML);
+      display_var += event.innerHTML;
+      display_value.innerText = display_var;
+      console.log(event.innerHTML);
+      // display_value.innerText += event
+    };
+
+    const allClear = () => {
+      display_var = "";
+      display_value.innerText = display_var;
+    };
+
+    const cancel = () => {
+      display_var = display_var.slice(0, -1);
+      display_value.innerText = display_var;
+    };
+
+    const answer = () => {
+      display_var = eval(display_var);
+      display_value.innerText = display_var;
+    };
+  </script>
+</html>
