@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML실습</title>
+    <style>
+      th,
+      td {
+        border-bottom: 1px solid #444444;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>1. HTML 제목은 &lt;h1&gt; ~ &lt;h6&gt; 태그로 정의됩니다.</h3>
+    <div style="border: 1px solid black">
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <h3>This is heading 3</h3>
+    </div>
+    <br />
+    <h3>2. 단락은 &lt;p&gt; 태그로 정의됩니다.</h3>
+
+    <div style="border: 1px solid black">
+      <p>This is paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
+    <br />
+    <h3>3. 링크는 &lt;a&gt; 태그로 정의됩니다.</h3>
+
+    <div style="border: 1px solid black">
+      <a href="www.naver.com">This is safehomes link</a>
+    </div>
+    <br />
+    <h3>4. 이미지는 &lt;img&gt; 태그로 정의됩니다.</h3>
+    <div style="border: 1px solid black">
+      <img src="바탕화면.jpg" alt="사진" width="500px" />
+    </div>
+
+    <br />
+    <h2>장바구니 목록</h2>
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>딸기</li>
+    </ul>
+    <table>
+      <tr style="background-color: pink">
+        <th>과일</th>
+        <th>수량</th>
+      </tr>
+      <tr>
+        <td>사과</td>
+        <td>10개</td>
+      </tr>
+      <tr>
+        <td>사과</td>
+        <td>10개</td>
+      </tr>
+      <tr>
+        <td>딸기</td>
+        <td>3개</td>
+      </tr>
+    </table>
+    <br />
+    <form action="">
+      <label for="name">이름 :</label>
+      <input type="text" id="name" required />
+      <br />
+      <br />
+      <label for="email">이메일 :</label>
+      <input type="email" id="email" required />
+      <br />
+      <br />
+      <label for="pwd">비밀번호 :</label>
+      <input type="password" id="pwd" required />
+      <br />
+      <br />
+      <input type="submit" value="가입하기" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+    <style>
+      .result {
+        width: 200px;
+        background-color: aquamarine;
+        height: 30px;
+      }
+      .flexbox {
+        display: flex;
+      }
+      .flexbox div {
+        background-color: antiquewhite;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result"></div>
+    <div class="flexbox">
+      <div class="num" onclick="num_click(this)">7</div>
+      <div class="num" onclick="num_click(this)">8</div>
+      <div class="num" onclick="num_click(this)">9</div>
+      <div class="num" onclick="num_click(this)">+</div>
+    </div>
+    <div class="flexbox">
+      <div class="num" onclick="num_click(this)">6</div>
+      <div class="num" onclick="num_click(this)">5</div>
+      <div class="num" onclick="num_click(this)">4</div>
+      <div class="num" onclick="num_click(this)">-</div>
+    </div>
+    <div class="flexbox">
+      <div class="num" onclick="num_click(this)">3</div>
+      <div class="num" onclick="num_click(this)">2</div>
+      <div class="num" onclick="num_click(this)">1</div>
+      <div class="num" onclick="num_click(this)">/</div>
+    </div>
+    <div class="flexbox">
+      <div class="reset" onclick="reset_click(this)">c</div>
+      <div class="num" onclick="num_click(this)">0</div>
+      <div class="result_click" onclick="result_click(this)">=</div>
+      <div class="num" onclick="num_click(this)">x</div>
+    </div>
+  </body>
+  <script>
+    const num = document.querySelectorAll(".num");
+    const result = document.querySelector(".result");
+    const result_click = document.querySelector(".result_click");
+    const reset = document.querySelector(".reset_click");
+    let result_num = "";
+
+    function num_click(e) {
+      console.log(e.innerHTML);
+      result.innerText = result_num += e.innerHTML;
+    }
+
+    function reset_click(e) {
+      result.innerText = result_num = "";
+    }
+  </script>
+</html>

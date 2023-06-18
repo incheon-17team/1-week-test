@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="hello"></h1>
+    <h1 id="mj"></h1>
+  </body>
+  <script>
+    const hello = document.getElementById("hello");
+    function myFunction(p1, p2) {
+      return p1 * p2;
+    }
+    console.log(myFunction(3, 4));
+
+    let values = myFunction(4, 3);
+    console.log(values);
+    console.log(hello);
+    hello.innerHTML = values;
+
+    const mj = {
+      name: "김민정",
+      age: 25,
+      거주지: "인천",
+      오늘할일: "자기",
+    };
+    console.log(mj);
+    console.log(mj.age);
+  </script>
+</html>

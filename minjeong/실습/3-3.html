@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="hello"></p>
+  </body>
+  <script>
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5533,
+      fullNmae: function () {
+        return this.firstName + "" + this.lastName;
+      },
+    };
+    const hello = document.getElementById("hello");
+    hello.innerHTML = person.fullNmae();
+  </script>
+</html>

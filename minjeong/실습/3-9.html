@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜덤 이미지</title>
+  </head>
+  <body>
+    <img id="randomImage" src="dog.jpg" alt="" width="500px" />
+  </body>
+  <script>
+    const images = ["dog.jpg", "dog1.jpg", "dog2.jpg", "dog3.jpg"];
+    function random() {
+      const randomIdx = Math.floor(Math.random() * images.length);
+      const randomImg = images[randomIdx];
+      document.getElementById("randomImage").src = randomImg;
+    }
+
+    document.getElementById("randomImage").addEventListener("click", random);
+  </script>
+</html>

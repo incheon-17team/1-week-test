@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 앞뒤</title>
+    <style>
+      .slider img:not(:first-child) {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img src="./images/dog.jpg" alt="" height="700px" />
+      <img src="./images/dog1.jpg" alt="" height="700px" />
+      <img src="./images/dog2.jpg" alt="" height="700px" />
+      <img src="./images/dog3.jpg" alt="" height="700px" />
+    </div>
+    <button id="prevBtn" onClick="prevBtn()">뒤로</button>
+    <button id="nextBtn" onClick="nextBtn()">앞으로</button>
+  </body>
+  <script>
+    const slider = document.querySelector(".slider");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const images = slider.getElementsByTagName("img");
+    let currentIndex = 0;
+
+    prevBtn.addEventListener("click", showPrevImage);
+    nextBtn.addEventListener("click", showNextImage);
+
+    function showPrevImage() {
+      images[currentIndex].style.display = "none";
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      images[currentIndex].style.display = "block";
+      console.log(currentIndex);
+    }
+
+    function showNextImage() {
+      images[currentIndex].style.display = "none";
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.display = "block";
+      console.log(currentIndex);
+    }
+  </script>
+</html>

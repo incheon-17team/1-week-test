@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="drop.css" />
+    <style>
+      .dropdown {
+        width: 150px;
+        height: 150px;
+        border: 1px solid skyblue;
+        font-size: 30pz;
+      }
+      .dropdown-content {
+        display: none;
+        width: 130px;
+        border: 1px solid black;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <span>메뉴</span>
+      <div class="dropdown-content">
+        <a href="">항목1</a><a href="">항목2</a><a href="">항목3</a>
+      </div>
+    </div>
+  </body>
+</html>
