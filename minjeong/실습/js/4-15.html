@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function preson(first, last, age) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+      }
+      // 추가하기 편하다
+      const myFather = new Person("alswjd", "rla", 30);
+      const myMonther = new Person("askjdf", "sdfas", 35);
+
+      // 추가하기 좀 불편하다
+      const person = {
+        firstName: 민정,
+        lastName: 김,
+        age: 25,
+      };
+    </script>
+  </body>
+</html>

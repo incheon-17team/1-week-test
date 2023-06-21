@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <style>
+      header {
+        display: block;
+        height: 100px;
+        width: 550px;
+        background-color: salmon;
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 95px;
+        border-radius: 5px;
+      }
+      main {
+      }
+      .product-list {
+        display: flex;
+      }
+      .product-list .product {
+        width: 200px;
+        padding: 20px 25px 35px;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .product-list .product h3 {
+      }
+      .product-list .product p {
+      }
+      .product-list .product .add-to-cart {
+      }
+    </style>
+  </head>
+  <body>
+    <header>온라인 상점</header>
+    <main>
+      <section class="product-list">
+        <div class="product">
+          <h3>피자</h3>
+          <p>1000원</p>
+          <button class="add-to-cart">장바구니 추가</button>
+        </div>
+        <div class="product">
+          <h3>감자튀김</h3>
+          <p>2000원</p>
+          <button class="add-to-cart">장바구니 추가</button>
+        </div>
+      </section>
+      <section class="cart">
+        <h2>장바구니</h2>
+        <ul class="cart-items"></ul>
+      </section>
+    </main>
+    <script src="장바구니.js"></script>
+  </body>
+</html>

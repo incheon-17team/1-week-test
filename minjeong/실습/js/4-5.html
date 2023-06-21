@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruit = ["사과", "수박", "복숭아", "포도"];
+      //   document.write(`과일 : ${fruit}`);
+
+      let pop_fruit = fruit.pop();
+      document.write(`과일 pop : ${pop_fruit}`);
+      document.write("<br>");
+      document.write(`과일 : ${fruit}`);
+      document.write("<br>");
+      document.write(`과일 push : ${fruit.push(pop_fruit)}`);
+      document.write("<br>");
+      document.write(`과일 push : ${fruit}`);
+    </script>
+  </body>
+</html>

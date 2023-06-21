@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "김민정",
+        age: 25,
+        height: 100,
+        weight: 100,
+        crrer: { 첫번째: "학생", 두번째: "교육생" },
+      };
+
+      person.belong = "세이프홈즈";
+
+      document.write(`제 이름은 ${person.name}입니다`);
+      document.write("<br>");
+
+      document.write(`제 나이는 ${person.age}입니다`);
+      document.write("<br>");
+
+      document.write(`제 이름은 ${person["name"]}입니다`);
+    </script>
+  </body>
+</html>

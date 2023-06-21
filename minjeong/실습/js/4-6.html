@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let txt = "abcfffdefghijk";
+      document.write(`${txt}`);
+      document.write("<br>");
+
+      document.write(`f는 몇개 있나요? ${txt.indexOf("f")}개`);
+      document.write("<br>");
+
+      // lastIndexOf 역순으로 탐색하여 최초로 마주치는 인덱스
+      document.write(`f는 언제 마지막인가요?  ${txt.lastIndexOf("f")}번째`);
+      document.write("<br>");
+
+      //toLowerCase 소문자로, UpperCase대문자로
+      document.write(` ${txt.toUpperCase()}`);
+      document.write("<br>");
+
+      let fruit = ["사과", "수박", "복숭아", "포도"];
+      document.write(`${fruit.lastIndexOf("사과")}`);
+    </script>
+  </body>
+</html>
