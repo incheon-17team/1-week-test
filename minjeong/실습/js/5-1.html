@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날씨 오픈API사용하기</title>
+  </head>
+  <body>
+    <!-- 화면에 보이기 위한 태그 -->
+    <div id="weather"></div>
+    <script>
+      const weather = document.getElementById("weather");
+      const API_KEY = "1e4d4ffbc82864a6da06988d98cfd270";
+
+      // weather api 접근해서 lat, lon, api key 값을 넣고 필요한 날씨 데이터를 가져온다
+      function getWeather(lat, lon) {
+        console.log(lat, lon);
+        fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+        )
+          .then(function (response) {
+            console.log(response);
+            return response.json();
+          })
+          .then(function (json) {
+            console.log(json);
+            const temp = json.main.temp;
+            const humidity = json.main.humidity;
+            weather.innerText = `${temp} @ ${humidity}`;
+          });
+      }
+
+      // 윈도우에서 얻어지는 현재위치
+      // lat, lon 값 가져오기
+      function handleGeoSuccess(pos) {
+        const latitude = pos.coords.latitude;
+        const longitude = pos.coords.longitude;
+
+        // getWeather에 값을 넣겠다!
+        getWeather(latitude, longitude);
+
+        console.log(pos);
+        console.log(pos.coords.latitude);
+        console.log(pos.coords.longitude);
+      }
+      function handleGeoError() {
+        console.log("error!");
+      }
+
+      function init() {
+        navigator.geolocation.getCurrentPosition(
+          handleGeoSuccess,
+          handleGeoError
+        );
+      }
+
+      // 페이지가 실행되면 밑에 함수를 실행해라!
+      init();
+    </script>
+  </body>
+</html>

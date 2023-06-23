@@ -6,10 +6,15 @@
     <title>랜덤 이미지</title>
   </head>
   <body>
-    <img id="randomImage" src="dog.jpg" alt="" width="500px" />
+    <img id="randomImage" src="./images/dog.jpg" alt="" width="500px" />
   </body>
   <script>
-    const images = ["dog.jpg", "dog1.jpg", "dog2.jpg", "dog3.jpg"];
+    const images = [
+      "./images/dog.jpg",
+      "./images/dog1.jpg",
+      "./images/dog2.jpg",
+      "./images/dog3.jpg",
+    ];
     function random() {
       const randomIdx = Math.floor(Math.random() * images.length);
       const randomImg = images[randomIdx];

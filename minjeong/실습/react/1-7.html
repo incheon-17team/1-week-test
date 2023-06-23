@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!-- 최신 자바스크립트를 이해할 수 있음 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // 써주는게 좋음
+      const root = document.getElementById("root");
+      function Login() {
+        const Show = (e) => {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const pwd = document.getElementById("pwd").value;
+          console.log(name);
+        };
+        return (
+          <>
+            <form onSubmit={Show}>
+              <label htmlFor="name">이름 :</label>
+              <input type="text" id="name" required />
+              <br />
+              <br />
+              <label htmlFor="email">이메일 :</label>
+              <input type="email" id="email" required />
+              <br />
+              <br />
+              <label htmlFor="pwd">비밀번호 :</label>
+              <input type="password" id="pwd" required />
+              <br />
+              <br />
+              <input type="submit" value="가입하기" />
+            </form>
+          </>
+        );
+      }
+
+      ReactDOM.render(<Login />, root);
+    </script>
+  </body>
+</html>

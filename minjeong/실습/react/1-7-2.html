@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!-- 최신 자바스크립트를 이해할 수 있음 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // 써주는게 좋음
+      const root = document.getElementById("root");
+      function Login() {
+        const [username, setUsername] = React.useState("");
+        const [email, setEmail] = React.useState("");
+        const [pwd, setPwd] = React.useState("");
+
+        const handleUsernameChange = (e) => {
+          //   console.log(e);
+          setUsername(e.target.value);
+        };
+
+        const handlePwdChange = (e) => {
+          //   console.log(e);
+          setPwd(e.target.value);
+        };
+
+        const handleEmailChange = (e) => {
+          //   console.log(e);
+          setEmail(e.target.value);
+        };
+
+        const handleSubmit = (e) => {
+          e.preventDefault();
+          console.log(username);
+          console.log(pwd);
+          console.log(email);
+        };
+        return (
+          <>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="name">이름 :</label>
+              <input
+                type="text"
+                value={username}
+                onChange={handleUsernameChange}
+              />
+              <br />
+              <br />
+              <label htmlFor="email">이메일 :</label>
+              <input type="email" value={email} onChange={handleEmailChange} />
+              <br />
+              <br />
+              <label htmlFor="pwd">비밀번호 :</label>
+              <input type="password" value={pwd} onChange={handlePwdChange} />
+              <br />
+              <br />
+              <input type="submit" value="가입하기" />
+            </form>
+          </>
+        );
+      }
+
+      ReactDOM.render(<Login />, root);
+    </script>
+  </body>
+</html>

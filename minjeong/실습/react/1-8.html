@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!-- 최신 자바스크립트를 이해할 수 있음 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      const RandomImg = () => {
+        const [currentImg, setCurrentImg] = React.useState();
+        const changeBackground = () => {
+          setCurrentImg(Math.floor(Math.random) * images.length);
+        };
+        const randomback = setTimeout(() => {
+          changeBackground();
+        }, 100);
+
+        const images = [
+          "./images/꽃01.jpg",
+          "./images/땅01.jpg",
+          "./images/땅02.jpg",
+          "./images/바다01.jpg",
+          "./images/밤01.jpg",
+          "./images/새벽01.jpg",
+          "./images/새벽02.jpg",
+        ];
+        // window.onload = RandomImg(images);
+
+        return <img src={images} alt="" width="100%" height="100%" />;
+      };
+
+      ReactDOM.render(<RandomImg />, root);
+    </script>
+  </body>
+</html>

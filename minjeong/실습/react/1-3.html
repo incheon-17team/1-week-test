@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React countup</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!-- 최신 자바스크립트를 이해할 수 있음 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function Counter() {
+        const [value, setValue] = React.useState(0);
+        return (
+          <div>
+            {value}
+
+            <button onClick={() => setValue(value + 1)}>+1</button>
+            <button onClick={() => setValue(value - 1)}>-1</button>
+          </div>
+        );
+      }
+      ReactDOM.render(<Counter />, root);
+    </script>
+  </body>
+</html>
